@@ -1,18 +1,30 @@
 package abstruct_framework;
 
-import attackweaponfactory.Player;
+import warriorweaponfactory.Player;
 
 public abstract class Equipment {
     protected String name;
-    protected int attackStatus;
-    protected int defenseStatus;
     protected int requiredStatus;
-    public Equipment(String name, int attackStatus, int defenseStatus, int requiredStatus) {
+
+    public Equipment(String name, int requiredStatus) {
         this.name = name;
-        this.attackStatus = attackStatus;
-        this.defenseStatus = defenseStatus;
         this.requiredStatus = requiredStatus;
     }
+
+    // 条件を満たしていればEquipメソッドを実行するメソッド
+    public void checkAndEquip(Player player, int requiredStatus) {
+        if (isSatisfiedRequiredStatus(requiredStatus)) {
+            Equip(player);
+        } else {
+            System.out.println("YOU CAN'T EQUIP THIS WEAPON");
+            System.out.println("YOU NEED " + this.requiredStatus + " STATUS");
+            System.out.println("YOUR STATUS IS " + this.requiredStatus);
+        }
+    }
+
     public abstract void Equip(Player player);
-    public abstract boolean isSatisfiedRequiredStatus(int playerStatus);
+
+    public boolean isSatisfiedRequiredStatus(int playerStatus) {
+        return playerStatus >= this.requiredStatus;
+    }
 }

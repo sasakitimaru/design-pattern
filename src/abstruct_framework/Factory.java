@@ -13,7 +13,7 @@ public abstract class Factory {
         return factory;
     }
 
-    public abstract Weapon createWeapon(String classname, String name, int attackStatus, int defenseStatus, int strengthStatus);
-
+    public abstract Weapon createWeapon(String classname, String name, int attackStatus, int defenseStatus, int requiredStatus);
+    public abstract Protector createProtector(String classname, String name, int requiredStatus, int defenseStatus);
     public abstract FullGear createFullGear();
 }
