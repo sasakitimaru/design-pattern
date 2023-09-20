@@ -1,4 +1,4 @@
-package warriorweaponfactory;
+package warriorfactory;
 
 import abstruct_framework.Equipment;
 
@@ -8,10 +8,10 @@ import java.util.List;
 public class Player {
     private final String name;
     private final List<Equipment> equipments = new ArrayList<Equipment>();
-    int attackStatus;
-    int defenseStatus;
-    int strengthStatus;
-    int weightStatus;
+    private int attackStatus;
+    private int defenseStatus;
+    private final int strengthStatus;
+    private final int weightStatus;
 
     public Player(String name, int attackStatus, int defenseStatus, int strengthStatus, int weightStatus) {
         this.name = name;

@@ -1,4 +1,4 @@
-package warriorweaponfactory;
+package warriorfactory;
 
 import abstruct_framework.Factory;
 import abstruct_framework.FullGear;

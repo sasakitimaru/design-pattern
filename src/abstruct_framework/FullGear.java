@@ -1,6 +1,6 @@
 package abstruct_framework;
 
-import warriorweaponfactory.Player;
+import warriorfactory.Player;
 
 import java.util.*;
 

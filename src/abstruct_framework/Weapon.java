@@ -1,10 +1,10 @@
 package abstruct_framework;
 
-import warriorweaponfactory.Player;
+import warriorfactory.Player;
 
 public abstract class Weapon extends Equipment {
-    protected int attackStatus;
-    protected int defenseStatus;
+    private final int attackStatus;
+    private final int defenseStatus;
     public Weapon(String name, int attackStatus, int defenseStatus, int requiredStatus) {
         super(name, requiredStatus);
         this.attackStatus = attackStatus;

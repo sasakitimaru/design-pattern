@@ -1,6 +1,6 @@
 package abstruct_framework;
 
-import warriorweaponfactory.Player;
+import warriorfactory.Player;
 
 public abstract class Protector extends Equipment {
     private final int defenseStatus;
