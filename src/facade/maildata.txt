@@ -1,0 +1,3 @@
+bob@example.com=bob jones
+alice@example.com=alice smith
+kurimatsu@example.com=teppei kurimatsu
